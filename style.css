@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url('./assets//mobile_bg.png');
+    background-size: cover;
+    font-family: 'Teko', sans-serif;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile_pics{
+    width: 180px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.178);
+    transition: all 0.3s; /* Add a transition effect for width changes */
+}
+.profile_pics:hover{
+    width: 190px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.425);
+}
+.name{
+    font-size: 40px;
+    font-weight: bold;
+}
+.track{
+    font-size: 24px;
+    font-weight: bold;
+}
+.date{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.stack{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+a{
+    color: white;
+}

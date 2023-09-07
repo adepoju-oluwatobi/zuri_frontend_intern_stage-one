@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap" rel="stylesheet">
+    <title>Stage One</title>
+</head>
+<body>
+    <img class="profile_pics" data-testid="slackDisplayImage"
+    src="./assets/MyPics.jpg" alt="Oluwatobi-Adepoju">
+    <p class="name" data-testid="slackUserName">Oluwatobi Adepoju</p>
+    <p class="track" data-testid="myTrack">Track: Frontend</p>
+    <div class="date">
+        <p data-testid="currentDayOfTheWeek"></p>
+        <p data-testid="currentUTCTime"></p>
+    </div>
+    <div class="stack">
+        <img src="./assets/github.png" alt="github">
+        <a href="https://github.com/adepoju-oluwatobi" target="_blank" data-testid="githubURL">Github</a>
+    </div>
+
+    <script>
+        function currentdateTime() {
+            const currentDayElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
+            const currentUTCTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
+
+            const currentDate = Date.now();
+
+            currentDayElement.textContent = `Day: ${new Date(currentDate).toLocaleDateString('en-US', { weekday: 'long' })}`;
+            currentUTCTimeElement.textContent = `UTC Time in milliseconds: ${currentDate}`;
+        }
+
+        // Update date and time immediately
+        currentdateTime();
+
+        // Update date and time every second
+        setInterval(updateDateTime, 1000);
+    </script>
+</body>
+</html>

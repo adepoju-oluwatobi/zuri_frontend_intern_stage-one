@@ -19,7 +19,7 @@ body{
     width: 180px;
     border-radius: 20px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.178);
-    transition: all 0.3s; /* Add a transition effect for width changes */
+    transition: all 0.3s;
 }
 .profile_pics:hover{
     width: 190px;

@@ -26,19 +26,24 @@
     <script>
         function currentdateTime() {
             const currentDayElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
-            const currentUTCTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
-
-            const currentDate = Date.now();
-
-            currentDayElement.textContent = `Day: ${new Date(currentDate).toLocaleDateString('en-US', { weekday: 'long' })}`;
-            currentUTCTimeElement.textContent = `UTC Time in milliseconds: ${currentDate}`;
+            const currentTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
+            
+            const currentDate = new Date();
+            const currentDay = currentDate.toLocaleDateString('en-US', { weekday: 'long' });
+            const currentTime = currentDate.toLocaleTimeString('en-US');
+    
+            currentDayElement.textContent = `Day: ${currentDay}`;
+            currentTimeElement.textContent = `Time: ${currentTime}`;
         }
-
+    
         // Update date and time immediately
         currentdateTime();
-
+    
         // Update date and time every second
-        setInterval(updateDateTime, 1000);
+        setInterval(currentdateTime, 1000);
     </script>
+    
+    
+    
 </body>
 </html>

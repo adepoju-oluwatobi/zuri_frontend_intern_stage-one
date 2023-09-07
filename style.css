@@ -39,6 +39,15 @@ body{
     flex-direction: column;
     gap: 5px;
 }
+.calender_icon,.clock_icon{
+    width: 30px;
+}
+.day,.time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
 .stack{
     display: flex;
     justify-content: center;

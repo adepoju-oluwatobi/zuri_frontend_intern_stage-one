@@ -15,8 +15,15 @@
     <p class="name" data-testid="slackUserName">Oluwatobi Adepoju</p>
     <p class="track" data-testid="myTrack">Track: Frontend</p>
     <div class="date">
-        <p data-testid="currentDayOfTheWeek"></p>
+       <div class="day">
+        <img class="calender_icon" src="./assets/calender.svg" alt="">
+        <p data-testid="currentDayOfTheWeek">
+        </p>
+       </div>
+       <div class="time">
+        <img class="clock_icon" src="./assets/clock.svg" alt="">
         <p data-testid="currentUTCTime"></p>
+       </div>
     </div>
     <div class="stack">
         <img src="./assets/github.png" alt="github">
@@ -32,8 +39,8 @@
             const currentDay = currentDate.toLocaleDateString('en-US', { weekday: 'long' });
             const currentTime = currentDate.toLocaleTimeString('en-US');
     
-            currentDayElement.textContent = `Day: ${currentDay}`;
-            currentTimeElement.textContent = `Time: ${currentTime}`;
+            currentDayElement.textContent = `${currentDay}`;
+            currentTimeElement.textContent = `${currentTime}`;
         }
     
         // Update date and time immediately
